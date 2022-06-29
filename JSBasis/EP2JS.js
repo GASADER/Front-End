@@ -12,7 +12,7 @@ function FToc(Fahranheit){
     console.log(message);
 }
 FToc(86);
-
+ 
 var person = {
     firstname : "GM",
     lestname : "1",
@@ -22,3 +22,15 @@ var person = {
     }
 };
 console.log(person.fullname());
+
+function DisplayDate(){
+    document.getElementById('demo').innerHTML = Date();
+}
+var x = "jo\" \"save"
+console.log(x);
+//Array Literal
+var myArr = ["gm", "bm", "toyota"];
+//Array Constructor
+var myArr2 = new Array("gm", "bm", "toyota")
+console.log(myArr[1]);
+console.log(myArr2[0]);
