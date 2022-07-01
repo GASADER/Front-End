@@ -36,5 +36,13 @@ console.log(myArr[1]);
 console.log(myArr2[0]);
 
 var fruit = ["Banana", "Orange", "Apple", "Mango"];
-fruit.push("Kiwi");
+fruit[0] = "Kiwi";
+delete fruit[0];
+fruit.splice(2, 0, "Lemon");
 document.getElementById("demo").innerHTML = fruit.join(" - ");
+
+var arr1 = ["value1", "value2"]
+var arr2 = ["value3", "value4"]
+var arr3 = ["value5", "value6"]
+var concatArr = arr1.concat(arr2, arr3);
+var myArr = arr1.slice(1);
