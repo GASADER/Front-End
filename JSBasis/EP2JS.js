@@ -34,3 +34,7 @@ var myArr = ["gm", "bm", "toyota"];
 var myArr2 = new Array("gm", "bm", "toyota")
 console.log(myArr[1]);
 console.log(myArr2[0]);
+
+var fruit = ["Banana", "Orange", "Apple", "Mango"];
+fruit.push("Kiwi");
+document.getElementById("demo").innerHTML = fruit.join(" - ");
