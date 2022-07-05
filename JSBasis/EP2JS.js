@@ -46,3 +46,22 @@ var arr2 = ["value3", "value4"]
 var arr3 = ["value5", "value6"]
 var concatArr = arr1.concat(arr2, arr3);
 var myArr = arr1.slice(1);
+
+// 7 data type //
+//primative//
+var myNum = 10; //Number
+var myString = "ox"; //String
+var myTrue =  true; // boolean
+var myNull = null; // Null
+var myUndefined; //Undefined
+//object//
+var myObject = {}; // Object
+ 
+Math.PI;
+Math.round(4.4);
+Math.pow(5,5);
+Math.sqrt(64);
+Math.abs(-4);
+Math.ceil(4.5);
+Math.floor(4.6);
+Math.random();
