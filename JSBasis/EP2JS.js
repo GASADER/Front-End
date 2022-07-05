@@ -65,3 +65,15 @@ Math.abs(-4);
 Math.ceil(4.5);
 Math.floor(4.6);
 Math.random();
+
+var time = 18 ;
+if(time < 12){
+    console.log("good morning");
+
+}
+else if(time < 18){
+    console.log("good afternoon");
+}
+else {
+    console.log("good evening");
+}
