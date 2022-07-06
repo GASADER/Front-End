@@ -145,3 +145,79 @@ for (var i = 0; i < cars.length; i++) {
  for(y of myString){
     console.log(y);
  }
+
+ var mymo = "bm";
+
+function myfunc(){
+    myno = "on"
+}
+myfunc();
+console.log(myno);
+//hoisting//
+
+x = 5;
+
+console.log(x);
+
+var x; //declaration
+var y = 10; //initialzation
+
+//strict//
+"use strict";
+// ES6 let & const
+var x = 5; 
+var x = 6;
+
+console.log(x);
+// let y = 6;
+ y = 7;
+ console.log(y);
+
+ const z =9;
+ console.log(z);
+
+ //let const lock scoop
+ //template
+ //` alt96
+ console.log(``)
+// ${}
+//Function Expression
+
+var hello = function(){
+    return "hello world";
+}
+//Function Declaration
+function hello() {
+
+}
+//arrow function
+var hello = () => "hello world";
+
+console.log(hello());
+
+//arrow function parameter
+var hello = (value) => "hello world" + value;
+
+console.log(hello());
+
+// ES6 class
+class myclass {
+    constructor(name){
+        this.myname = name;
+    }
+    fullname(greeting){
+        return greeting + "pp" +this.myname;
+    }
+    static hello(){
+        return "hello?";
+    }
+}
+var person = new myclass("mon");
+
+console.log(person);
+console.log(person.fullname("hello?"));
+console.log(myclass.hello());
+
+//class inherritance
+//style
+var firstName = "mon"; // camelcase
