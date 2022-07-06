@@ -103,3 +103,45 @@ switch(new Date().getDay()){
   
     default:
 }
+var myphone = "oppo"
+switch(myphone){
+    case "iphone":
+        console.log("30000");
+        break;
+    case "sumsung":
+        console.log("25000");
+        break;
+    default:
+        console.log("we don't have");
+}
+
+//for loop//
+for(var i = 0; i<=5; i++){
+    console.log(i);
+}
+
+var cars = ["bm", "ford", "honda", "audi"];
+
+for (var i = 0; i < cars.length; i++) {
+    console.log(cars[i]);
+}
+//for in loop//
+ var person ={
+    firstname: "jo",
+    lastname: "save",
+    age: 21
+ }
+ for (var x in person){
+    console.log(person[x]);
+ }
+ //for of loop //
+ var cars =["bm", "ford", "honda", "audi"];
+
+ for (var a of cars){
+    console.log(a);
+ }
+ var myString = "javascript"
+ var y;
+ for(y of myString){
+    console.log(y);
+ }
