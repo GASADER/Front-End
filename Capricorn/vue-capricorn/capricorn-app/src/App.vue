@@ -6,9 +6,14 @@
       <input type="text" ref="nickNameEL"/>
       <button type="submit">บันทึก</button>
     </form>
-    <h1>{{getFullname()}}</h1>
+    <h1>{{getFullname}}</h1>
     <h2>{{nickName}}</h2>
     <h2>{{age}}</h2>
+    <h1>เงินเดือน:{{salary}}บาท</h1>
+    <h1>รายได้ต่อปี:{{getIncome}}บาท</h1>
+    <h1>ตำแหน่งงาน: {{getDepartment}}</h1>
+    <button @click="addsalary(5000)">เพิ่มเงินเดือน</button>
+   
     <button @click="toggleVisible">{{ isVisible ? "ซ่อน" : "แสดง"}}รายละเอียด</button>
     <article v-show="isVisible">
     <p>ที่อยู่ : <span v-html="address"></span></p>
@@ -52,13 +57,11 @@ export default {
         height:170,
         status:false
       },
-      isVisible:false  
+      isVisible:false,
+      salary:20000
     }
   },
   methods:{ 
-      getFullname(){
-        return `${this.firstName +" "+ this.lastName}`
-      },
       showData(){
         alert(this.firstName)
       },
@@ -73,6 +76,20 @@ export default {
       },
       toggleVisible(){
         this.isVisible = !this.isVisible
+      },
+      addsalary(value){
+        this.salary += value ;
+      }
+  },
+  computed:{
+      getFullname(){
+        return `${this.firstName +" "+ this.lastName}`;
+      },
+      getIncome(){
+        return this.salary * 12;
+      },
+      getDepartment(){
+        return this.salary >= 35000 ? "Project manager" : "Programmer";
       }
   }
 }
