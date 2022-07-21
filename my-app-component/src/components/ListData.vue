@@ -1,13 +1,18 @@
 <template>
   <div>{{message}}</div>
+  <Person/>
 </template>
 
 <script>
+import Person from './Person.vue'
 export default {
     name:"ListData",
+    components:{
+        Person
+    },
     data(){
         return{
-            message:"ListData Component"
+            message:"แสดงรายชื่อพนักงานทุกคน"
         }
     }
 }
