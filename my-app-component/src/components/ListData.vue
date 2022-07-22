@@ -1,6 +1,8 @@
 <template>
-  <div>{{message}}</div>
-  <Person/>
+  <Person name="ก้อง" salary=30000 />
+  <Person name="โจโจ้" salary=20000 />
+  <Person name="kl" salary=15000 />
+  <Person name="df" salary=18000 />
 </template>
 
 <script>
@@ -9,11 +11,6 @@ export default {
     name:"ListData",
     components:{
         Person
-    },
-    data(){
-        return{
-            message:"แสดงรายชื่อพนักงานทุกคน"
-        }
     }
 }
 </script>

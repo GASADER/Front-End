@@ -1,6 +1,5 @@
 <template>
   <div>
-      <h1>156</h1>
       <Formcomponent/>
       <ListData/>   
   </div>

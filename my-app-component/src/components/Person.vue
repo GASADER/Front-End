@@ -1,16 +1,16 @@
 <template>
     <div>
-        <h1>{{message}}</h1></div>
+        <h1>{{name}} {{salary}}</h1>
+    </div>
 </template>
 
 <script>
 export default {
     name:"Person_",
-    data(){
-        return{
-            message:"cl"
-        }
-    }
+    props:[
+        "name",
+        "salary" 
+    ]
 }
 </script>
 
@@ -18,4 +18,4 @@ export default {
     h1{
         color:rgb(89, 0, 255);
     }
-</style>
+</style>  
