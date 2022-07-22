@@ -5,12 +5,20 @@
 </template>
 
 <script>
+
+
 export default {
     name:"Person_",
-    props:[
-        "name",
-        "salary" 
-    ]
+    props:{
+        name:{
+            type:String,
+            require:true
+        },
+        salary:{
+            type:Number,
+            default:15000
+        }
+    }
 }
 </script>
 

@@ -20,8 +20,8 @@ export default{
       employees:[
         {name:"ก้อง", salary:40000},
         {name:"แก้ม", salary:40000},
-        {name:"โจ", salary:40000},
-        {name:"นู", salary:40000}
+        {name:"โจ"},
+        {name:"ชา", salary:40000}
       ]
     }
   }
