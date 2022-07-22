@@ -1,8 +1,12 @@
 <template>
-  <Person name="ก้อง" salary=30000 />
-  <Person name="โจโจ้" salary=20000 />
-  <Person name="kl" salary=15000 />
-  <Person name="df" salary=18000 />
+    <ul>
+        <Person 
+            v-for="(item,index) in employees" 
+            :key="index"
+            :name="item.name"
+            :salary="item.salary"
+            />
+    </ul>
 </template>
 
 <script>
@@ -11,7 +15,10 @@ export default {
     name:"ListData",
     components:{
         Person
-    }
+    },
+    props:[
+        "employees"
+    ]
 }
 </script>
 
