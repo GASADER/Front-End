@@ -1,13 +1,14 @@
 <template>
   <ul>
     <Person
-      v-for="(item) in employees"
-      :id:="item.id"
+      v-for="item in employees"
+      :id="item.id"
       :key="item.id"
       :name="item.name"
       :salary="item.salary"
       :department="item.depertment"
-      :isVisible="item.isVisible"
+      :inVisible="item.inVisible"
+      @show="toggleVisible"
     />
   </ul>
 </template>
@@ -22,12 +23,40 @@ export default {
   data() {
     return {
       employees: [
-        {id:1, name: "ก้อง", salary: 40000, depertment:"โปรแกรมเมอร์", isVisible: false },
-        {id:2, name: "แก้ม", salary: 40000, depertment:"การตลาด", isVisible: false },
-        {id:3, name: "โจ", depertment:"การตลาด", isVisible: false },
-        {id:4, name: "ชา",salary: 40000, depertment:"ฝ่ายขาย", isVisible: false },
+        {
+          id: 1,
+          name: "ก้อง",
+          salary: 40000,
+          depertment: "โปรแกรมเมอร์",
+          inVisible: false,
+        },
+        {
+          id: 2,
+          name: "แก้ม",
+          salary: 40000,
+          depertment: "การตลาด",
+          inVisible: false,
+        },
+        { id: 3, name: "โจ", depertment: "การตลาด", isVisible: false },
+        {
+          id: 4,
+          name: "ชา",
+          salary: 40000,
+          depertment: "ฝ่ายขาย",
+          inVisible: false,
+        },
       ],
     };
+  },
+  methods: {
+    toggleVisible(id) {
+      this.employees = this.employees.map((item) => {
+        if (item.id === id) {
+          return { ...item, inVisible: !item.inVisible };
+        }
+        return item;
+      });
+    },
   },
 };
 </script>
