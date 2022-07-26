@@ -2,7 +2,7 @@
   <li>
     <h1>{{ name }}</h1>
     <button @click="showDescription(id)">รายละเอียด</button> &nbsp;
-    <button>ลบข้อมูล</button>
+    <button @click="deleteEmployee(id)">ลบข้อมูล</button>
     <div v-show="inVisible">
       <p>เงินเดือน{{ salary }}, ตำแหน่งงาน: {{ department }}</p>
     </div>
@@ -36,6 +36,9 @@ export default {
     showDescription(id) {
       this.$emit("show", id);
     },
+    deleteEmployee(id){
+      this.$emit("delete", id);
+    }
   },
 };
 </script>

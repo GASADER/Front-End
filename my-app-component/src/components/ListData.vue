@@ -9,6 +9,7 @@
       :department="item.depertment"
       :inVisible="item.inVisible"
       @show="toggleVisible"
+      @delete="removeEmployee"
     />
   </ul>
 </template>
@@ -57,6 +58,11 @@ export default {
         return item;
       });
     },
+    removeEmployee(id){
+      this.employees = this.employees.filter((item) => {
+         return item.id !== id ;
+      });
+    }
   },
 };
 </script>
