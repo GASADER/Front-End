@@ -1,13 +1,19 @@
 <template>
   <SlotProFile>
-    <h1>{{ name }}</h1>
-    <button @click="showDescription(id)">รายละเอียด</button> &nbsp;
-    <button @click="deleteEmployee(id)">ลบข้อมูล</button>
-    <transition name="fade">
+    <template v-slot:card-haeder>
+      <h1>{{ name }}</h1>
+    </template>
+    <template v-slot:card-button>
+      <button @click="showDescription(id)">รายละเอียด</button> &nbsp;
+      <button @click="deleteEmployee(id)">ลบข้อมูล</button>
+    </template>
+    <template v-slot:card-content>
+      <transition name="fade">
       <div v-show="inVisible">
         <p>เงินเดือน{{ salary }}, ตำแหน่งงาน: {{ department }}</p>
       </div>
     </transition>
+    </template>
   </SlotProFile>
 </template>
 

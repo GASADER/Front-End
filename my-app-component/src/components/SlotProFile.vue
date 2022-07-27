@@ -2,7 +2,9 @@
   <li>
     <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="">
     <hr/>
-    <slot></slot>
+    <slot name="card-haeder"></slot>
+    <slot name="card-button"></slot>
+    <slot name="card-content"></slot>
   </li>
 </template>
 
