@@ -2,6 +2,7 @@
   <header>
     <h1>ระบบจัดการข้อมูลพนักงาน</h1>
   </header>
+  <Formcomponent></Formcomponent>
   <section class="employee-content">
     <h2>ข้อมูลพนักงาน</h2>
     <ListData/>
@@ -10,12 +11,14 @@
 
 <script>
 import ListData from "./components/ListData.vue";
+import Formcomponent from "./components/Formcomponent.vue";
 
 export default {
   name: "App",
   components: {
     ListData,
-  },
+    Formcomponent
+},
 };
 </script>
 
