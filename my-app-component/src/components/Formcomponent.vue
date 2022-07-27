@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="submitForm">
     <div class="form-control">
       <label for="emp-name">ชื่อพนักงาน</label>
       <input type="text" v-model.trim="employee.name" />
@@ -63,6 +63,26 @@ export default {
       },
     };
   },
+  methods:{
+    submitForm(){
+      const newEmployee={
+        name:this.employee.name,
+        salary:this.employee.salary,
+        depertment:this.employee.depertment,
+        gender:this.employee.gender,
+        skill:this.employee.skill
+      }
+      this.$emit("save",newEmployee);
+      this.resetForm();
+    },
+    resetForm(){
+      this.employee.name="";
+      this.employee.salary=0;
+      this.employee.depertment="";
+      this.employee.gender="";
+      this.employee.skill=[];
+    }
+  }
 };
 </script>
 

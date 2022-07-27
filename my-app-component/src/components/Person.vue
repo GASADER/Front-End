@@ -3,16 +3,11 @@
     <template v-slot:card-haeder>
       <h1>{{ name }}</h1>
     </template>
-    <template v-slot:card-button>
-      <button @click="showDescription(id)">รายละเอียด</button> &nbsp;
-      <button @click="deleteEmployee(id)">ลบข้อมูล</button>
-    </template>
+
     <template v-slot:card-content>
-      <transition name="fade">
-        <div v-show="inVisible">
-          <p>เงินเดือน{{ salary }}, ตำแหน่งงาน: {{ department }}</p>
-        </div>
-      </transition>
+          <p>เงินเดือน{{ salary }},เพศ{{gender}}</p>
+          <p>ตำแหน่งงาน: {{ department }}</p>
+          <p>skill{{skill}}</p>
     </template>
   </SlotProFile>
 </template>
@@ -22,9 +17,6 @@ import SlotProFile from "./SlotProFile.vue";
 export default {
   name: "Person_",
   props: {
-    id: {
-      type: Number,
-    },
     name: {
       type: String,
       require: true,
@@ -37,17 +29,12 @@ export default {
       type: String,
       require: true,
     },
-    inVisible: {
-      type: Boolean,
+    gender:{
+      type: String
     },
-  },
-  methods: {
-    showDescription(id) {
-      this.$emit("show", id);
-    },
-    deleteEmployee(id) {
-      this.$emit("delete", id);
-    },
+    skill:{
+      type: Array
+    }
   },
   components: { SlotProFile },
 };
