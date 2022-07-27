@@ -19,8 +19,8 @@ import Person from "./Person.vue";
 export default {
   name: "ListData",
   components: {
-    Person
-},
+    Person,
+  },
   data() {
     return {
       employees: [
@@ -58,11 +58,11 @@ export default {
         return item;
       });
     },
-    removeEmployee(id){
+    removeEmployee(id) {
       this.employees = this.employees.filter((item) => {
-         return item.id !== id ;
+        return item.id !== id;
       });
-    }
+    },
   },
 };
 </script>

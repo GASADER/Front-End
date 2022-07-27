@@ -1,7 +1,7 @@
 <template>
   <li>
-    <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="">
-    <hr/>
+    <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="" />
+    <hr />
     <slot name="card-haeder"></slot>
     <slot name="card-button"></slot>
     <slot name="card-content"></slot>
@@ -9,9 +9,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
@@ -24,8 +22,8 @@ li {
   color: #fff;
   border-radius: 25px;
 }
-img{
-    width: 100px;
-    height: 100px;
+img {
+  width: 100px;
+  height: 100px;
 }
 </style>
