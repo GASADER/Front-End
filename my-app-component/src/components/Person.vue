@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <SlotProFile>
     <h1>{{ name }}</h1>
     <button @click="showDescription(id)">รายละเอียด</button> &nbsp;
     <button @click="deleteEmployee(id)">ลบข้อมูล</button>
@@ -8,11 +8,11 @@
         <p>เงินเดือน{{ salary }}, ตำแหน่งงาน: {{ department }}</p>
       </div>
     </transition>
-  </Card>
+  </SlotProFile>
 </template>
 
 <script>
-import Card from './Card.vue';
+import SlotProFile from './SlotProFile.vue';
 export default {
     name: "Person_",
     props: {
@@ -43,7 +43,7 @@ export default {
             this.$emit("delete", id);
         },
     },
-    components: { Card }
+    components: { SlotProFile }
 };
 </script>
 

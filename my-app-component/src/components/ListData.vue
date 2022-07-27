@@ -16,12 +16,10 @@
 
 <script>
 import Person from "./Person.vue";
-import Card from "./Card.vue";
 export default {
   name: "ListData",
   components: {
-    Person,
-    Card
+    Person
 },
   data() {
     return {
