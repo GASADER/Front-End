@@ -5,7 +5,7 @@
   <Formcomponent></Formcomponent>
   <section class="employee-content">
     <h2>ข้อมูลพนักงาน</h2>
-    <ListData/>
+    <ListData />
   </section>
 </template>
 
@@ -17,8 +17,8 @@ export default {
   name: "App",
   components: {
     ListData,
-    Formcomponent
-},
+    Formcomponent,
+  },
 };
 </script>
 
