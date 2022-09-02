@@ -40,3 +40,26 @@ times();
 times();
 times();
 times();
+
+// Stateful Function
+
+// function addFive(a){
+//     return a + 5;
+// }
+
+// function addTen(a){
+//     return a + 10;
+// }
+
+function createAdd(a){
+    return function(b){
+        return a+ b;
+    }
+}
+const addFive = createAdd(5)
+const addTen = createAdd(10)
+
+console.log('addFive:',addFive(10));
+console.log('addTen:',addTen(10));
+
+
