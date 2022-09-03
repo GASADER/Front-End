@@ -61,5 +61,3 @@ const addTen = createAdd(10)
 
 console.log('addFive:',addFive(10));
 console.log('addTen:',addTen(10));
-
-
